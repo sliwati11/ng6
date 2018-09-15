@@ -1,4 +1,8 @@
 export class Hero{
-  id: number;
-  name: string;
+  PrimaryName: string;
+  ImageURL: string;
+  AttributeName: string;
+  Group: string;
+  SubGroup: string;
+  Translations: string;
 }

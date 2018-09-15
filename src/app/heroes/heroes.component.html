@@ -1,1 +1,16 @@
 <h1>Tour of Heoroes</h1>
+<div>
+  <label>Hero name:
+    <input #heroname />
+  </label>
+  <button (click)="add(heroes$.PrimaryName); heroName.value=''">add</button>
+
+</div>
+  <ul class="" style="padding-top: 0px; max-width: 50%">
+    <li *ngFor="let hero of heroes$">
+      <a routerLink="/detail/{{hero.PrimaryName}}">
+        <span class="badge center">{{hero.Group}}</span> {{hero.PrimaryName}}
+      </a>
+    <button class="delete" title="delete hero">x</button>
+  </li>
+</ul>

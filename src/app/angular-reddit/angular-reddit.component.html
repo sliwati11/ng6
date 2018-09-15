@@ -1,0 +1,30 @@
+<div class="container">
+  <form class="ui large form segment">
+    <h3 class="ui header">Add a Link</h3>
+
+    <div class="field">
+      <label for="title" >Title {{name}} </label>
+      <!-- this markup tells Angular to bind this <input> to the variable newtitle-->
+      <input name="title" #newtitle> <!--changed -->
+    </div>
+    <div class="field">
+      <label for="link" >Link</label>
+      <!-- this markup tells Angular to bind this <input> to the variable newlink-->
+      <input name="link" #newlink><!--changed -->
+    </div>
+    <!-- (Click) says call the function addArticle when the Button is clicked-->
+    <button (click)="addArticle(newtitle, newlink)" class="ui positive right floated button">
+      Submit link
+      </button>
+  </form>
+
+  <div class="container">
+    <div class="ui grid posts">
+      <app-article
+        *ngFor="let art of sortedArticles()" [article]="art"></app-article>
+    </div>
+  </div>
+
+  </div>
+
+
